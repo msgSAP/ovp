@@ -2,4 +2,4 @@
 
 ### 1.
   
-[Previous Step](./AddAnalyticalCard.md)
+[<< Previous Step](./AddAnalyticalCard.md)

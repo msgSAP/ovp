@@ -2,4 +2,4 @@
 
 ### 1.
   
-[Previous Step](./AddLinkListCard.md) [Next Step](./AddNavigationExtWebPage.md)
+[<< Previous Step](./AddLinkListCard.md) | [Next Step >>](./AddNavigationExtWebPage.md)

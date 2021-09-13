@@ -3,4 +3,4 @@
 ### 1.
   
 
-[Previous Step](./AddTableCard.md) [Next Step](./AddStackCard.md)
+[<< Previous Step](./AddTableCard.md) | [Next Step >>](./AddStackCard.md)

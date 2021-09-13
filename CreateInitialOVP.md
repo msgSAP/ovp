@@ -2,5 +2,5 @@
 
 ### 1. Create CDS View
   
-[Next Step](./AddTableCard.md)
+[Next Step >>](./AddTableCard.md)
 
