@@ -2,4 +2,4 @@
 
 ### 1. Create CDS View
   
-[Previous Step](./CreateInitialOVP.md) [Next Step](./AddListCard.md)
+[<< Previous Step](./CreateInitialOVP.md)  |  [Next Step >>](./AddListCard.md)
