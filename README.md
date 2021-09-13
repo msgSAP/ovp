@@ -11,3 +11,5 @@
 ### [5. Add a link list card to the Overview Page](./AddLinkListCard.md)
 
 ### [6. Add an analytical card to the Overview Page](./AddAnalyticalCard.md)
+
+### [7. Add a navigation to an external web page](./AddNavigationExtWebPage.md)
