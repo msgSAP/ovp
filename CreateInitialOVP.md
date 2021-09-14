@@ -33,7 +33,7 @@ Additionally the following annotations have to be added:
 | Field name          | Annotation                                  |
 | ------------------- | ------------------------------------------- |
 | TravelID            | @UI.hidden: true                            |
-| OverallStatus       | @UI.selectionField: [{ position: 1 }]       |
+| OverallStatus       | @UI.selectionField: `[`{ position: 1 }`]`       |
 |                     | @EndUserText.label: 'Status'                |
 | CustomerHomeCountry | @UI.selectionField: [{ position: 2 }]       |
 |                     | @EndUserText.label: 'Customer Home Country' |
