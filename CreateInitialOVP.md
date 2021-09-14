@@ -8,6 +8,7 @@ As primary source for the CDS View Entity we use ZRAPH_##_I_TravelWDTP.
 To get access to the customers home country, we join in /DMO/I_Customer.  
   
 Following fields need to be put in the projection list:  
+
 | Source                              | Field name          | Is key |
 | ----------------------------------- | ------------------- | ------ |
 | ZRAPH_##_I_TravelWDTP.TravelID      | TravelID            | Yes    |
@@ -28,6 +29,7 @@ It shall be created as a selection from ZRAPH_##_I_OVPFilter and projects all of
 
 ### 7. Add annotations to CDS View Entity ZRAPH_##_C_OVPFilter
 Additionally the following annotations have to be added:  
+
 | Field name          | Annotation                                  |
 | ------------------- | ------------------------------------------- |
 | TravelID            | @UI.hidden: true                            |
