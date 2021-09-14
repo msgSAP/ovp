@@ -20,14 +20,21 @@ This CDS View Entity adds annotations for the filtering of the OVP.
 It shall be created as a selection from ZRAPH_##_I_OVPFilter and projects all of its fields.  
 
 ### 3. Create the service definition ZRAPH_##_SD_OVP
+Expose the following entity:  
+
+| CDS View Entity      | Entity Set |
+| -------------------- | ---------- |
+| ZRAPH_##_C_OVPFilter | OVPFilter  |
+  
 
 ### 4. Create the service binding ZRAPH_##_SB_OVP and publish it
+Use service definition ZRAPH_##_SD_OVP.  
+Use Binding Type: OData V2 - UI.  
 
-### 5. Create Overview Page in Business Application Studio
+### 5. Create Overview Page in Business Application Studio and test it
 
-### 6. Test Overview Page
 
-### 7. Add annotations to CDS View Entity ZRAPH_##_C_OVPFilter
+### 6. Add annotations to CDS View Entity ZRAPH_##_C_OVPFilter and test the app again
 Additionally the following annotations have to be added:  
 
 | Field name          | Annotation                                  |
@@ -37,6 +44,8 @@ Additionally the following annotations have to be added:
 |                     | @EndUserText.label: 'Status'                |
 | CustomerHomeCountry | @UI.selectionField: `[{ position: 2 }]`     |
 |                     | @EndUserText.label: 'Customer Home Country' |
+
+### 7. 
 
 [Next Step >>](./AddTableCard.md)
 
