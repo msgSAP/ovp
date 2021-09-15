@@ -32,9 +32,11 @@ Use service definition ZRAPH_##_SD_OVP.
 Use Binding Type: OData V2 - UI.  
 
 ### 5. Create Overview Page in Business Application Studio and test it
-Open the Business Application Studio (BAS).
-
-| ![(BAS Service Login)](images/OVP/BAS-Service-Login.png) | Afterwards navigate to the targets pane and expand the Services folder (see Screenshot at the left). If a log in request appears, log in with your BTP credentials, else you are loged in already. |
+Open the Business Application Studio (BAS).  
+  
+Afterwards navigate to the targets pane and expand the Services folder (see Screenshot at the left).  
+If a log in request appears, log in with your BTP credentials, else you are loged in already.  
+![(BAS Service Login)](images/OVP/BAS-Service-Login.png)  
 
 ### 6. Add annotations to CDS View Entity ZRAPH_##_C_OVPFilter and test the app again
 Additionally the following annotations have to be added:  
