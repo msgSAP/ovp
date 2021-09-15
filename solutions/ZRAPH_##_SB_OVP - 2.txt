@@ -1,0 +1,5 @@
+@EndUserText.label: 'OVP Service Definition'
+define service ZSD_##_OVP {
+  expose ZRAPH_##_C_OVPFilter as OVPFilter;
+  expose ZRAPH_I_OverallStatus as Status;
+}

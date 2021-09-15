@@ -1,0 +1,24 @@
+@AbapCatalog.viewEnhancementCategory: [#NONE]
+@AccessControl.authorizationCheck: #NOT_REQUIRED
+@EndUserText.label: 'OVP Filter'
+@Metadata.ignorePropagatedAnnotations: true
+@ObjectModel.usageType:{
+    serviceQuality: #X,
+    sizeCategory: #S,
+    dataClass: #MIXED
+}
+
+define view entity ZRAPH_##_I_OVPFilter
+as
+select from /dmo/a_travel_d as travel
+inner join /DMO/I_Customer as customer
+    on customer.CustomerID = travel.customer_id
+association to ZRAPH_I_OverallStatus as _Status
+    on _Status.TravelStatus = travel.overall_status
+{
+    key travel.travel_id as TravelID,
+        travel.overall_status as OverallStatus,
+        customer.CountryCode as CustomerHomeCountry,
+        
+    _Status
+}

@@ -1,0 +1,4 @@
+@EndUserText.label: 'OVP Service Definition'
+define service ZRAPH_##_SB_OVP {
+  expose ZRAPH_##_C_OVPFilter as OVPFilter;
+}

@@ -26,6 +26,7 @@ Expose the following entity:
 | -------------------- | ---------- |
 | ZRAPH_##_C_OVPFilter | OVPFilter  |
   
+[Solution](./solutions/ZRAPH_##_SD_OVP - 1.txt)
 
 ### 4. Create the service binding ZRAPH_##_SB_OVP and publish it
 Use service definition ZRAPH_##_SD_OVP.  
@@ -84,8 +85,11 @@ Your app should now look like this:
 If you press on "Adapt Filters", the 3 fields we defined in the Consumption View Entity should be visible.  
 ![(BAS Test App)](images/BAS-Run-4.png)  
 
-### 6. Add annotations to CDS View Entity ZRAPH_##_C_OVPFilter and test the app again
-Additionally the following annotations have to be added:  
+### 6. Add filter fields to filter bar and rename them
+This is not how we want our filter bar to look.  
+We want to have the filter fields available directly on the filter bar without needing to adapt them.  
+Also we want different labels not show the travel id at all.  
+Therefore we add the following annotations to ZRAPH_##_C_OVPFilter:  
 
 | Field name          | Annotation                                  |
 | ------------------- | ------------------------------------------- |
@@ -94,8 +98,24 @@ Additionally the following annotations have to be added:
 |                     | @EndUserText.label: 'Status'                |
 | CustomerHomeCountry | @UI.selectionField: `[{ position: 2 }]`     |
 |                     | @EndUserText.label: 'Customer Home Country' |
+  
+After activating ZRAPH_##_C_OVPFilter again, we test our app once more (if you have the app still open, reloading it suffices) and it should look like this:  
+![(BAS Test App)](images/BAS-Run-5.png)  
+![(BAS Test App)](images/BAS-Run-6.png)  
+  
+However when pressing the value help button, only a generic popup shows up.  
+![(BAS Test App)](images/BAS-Run-7.png)  
 
-### 7. 
+### 7. Add useful value helps for the filter fields
+
+#### Add Status entity to service definition ZRAPH_##_SD_OVP
+Expose the following entity:  
+
+| CDS View Entity       | Entity Set |
+| --------------------- | ---------- |
+| ZRAPH_I_OverallStatus | Status     |
+  
+[Solution](./solutions/ZRAPH_##_SD_OVP - 2.txt)
 
 [Next Step >>](./AddTableCard.md)
 

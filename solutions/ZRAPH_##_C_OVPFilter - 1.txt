@@ -1,0 +1,17 @@
+@AbapCatalog.viewEnhancementCategory: [#NONE]
+@AccessControl.authorizationCheck: #NOT_REQUIRED
+@EndUserText.label: 'OVP Filter (consumption)'
+@Metadata.ignorePropagatedAnnotations: true
+@ObjectModel.usageType:{
+    serviceQuality: #X,
+    sizeCategory: #S,
+    dataClass: #MIXED
+}
+
+define view entity ZRAPH_##_C_OVPFilter
+  as select from ZRAPH_##_I_OVPFilter
+{
+  key TravelID,
+      OverallStatus,
+      CustomerHomeCountry
+}
