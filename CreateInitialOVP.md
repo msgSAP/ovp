@@ -140,6 +140,11 @@ Add the following annotation to ZRAPH_##_C_OVPFilter:
 | OverallStatus       | ```abap @Consumption.valueHelpDefinition: [{entity: { name:    'ZRAPH_I_OverallStatus',``` |
 |                     | ```abap                                               element: 'TravelStatus' `} }]```     |
 
+```abap
+@Consumption.valueHelpDefinition: [{entity: { name:    'ZRAPH_I_OverallStatus',
+                                              element: 'TravelStatus' `} }]
+```
+
 Activate ZRAPH_##_C_OVPFilter.  
   
 Check the service binding ZRAPH_##_SB_OVP.  
