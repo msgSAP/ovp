@@ -135,7 +135,7 @@ Activate ZRAPH_##_I_OVPFilter.
 Add the association to the projection list.  
 Add the following annotation to ZRAPH_##_C_OVPFilter:  
 
-| Field name          | Annotation                        |                                                   |
+| Field name          | Annotation                        |               |                                   |
 | ------------------- | --------------------------------- | ------------- | --------------------------------- |
 | OverallStatus       | @Consumption.valueHelpDefinition: | `[{entity: {` | name:    'ZRAPH_I_OverallStatus', |
 |                     |                                   |               | element: 'TravelStatus' `} }]`    |
