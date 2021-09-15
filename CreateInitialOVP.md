@@ -26,7 +26,7 @@ Expose the following entity:
 | -------------------- | ---------- |
 | ZRAPH_##_C_OVPFilter | OVPFilter  |
   
-[__Solution__](./solutions/ZRAPH_##_SD_OVP-1.txt)
+[__Solution__](./solutions/ZRAPH_%23%23_SD_OVP-1.txt)
 
 ### 4. Create the service binding ZRAPH_##_SB_OVP and publish it
 Use service definition ZRAPH_##_SD_OVP.  
@@ -115,7 +115,7 @@ Expose the following entity:
 | --------------------- | ---------- |
 | ZRAPH_I_OverallStatus | Status     |
   
-[__Solution__](./solutions/ZRAPH_##_SD_OVP-2.txt)
+[__Solution__](./solutions/ZRAPH_%23%23_SD_OVP-2.txt)
 
 [Next Step >>](./AddTableCard.md)
 
