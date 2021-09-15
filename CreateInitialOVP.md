@@ -94,14 +94,20 @@ This is not how we want our filter bar to look.
 We want to have the filter fields available directly on the filter bar without needing to adapt them.  
 Also we want different labels not show the travel id at all.  
 Therefore we add the following annotations to ZRAPH_##_C_OVPFilter:  
-
-| Field name          | Annotation                                  |
-| ------------------- | ------------------------------------------- |
-| TravelID            | @UI.hidden: true                            |
-| OverallStatus       | @UI.selectionField: `[{ position: 1 }]`     |
-|                     | @EndUserText.label: 'Status'                |
-| CustomerHomeCountry | @UI.selectionField: `[{ position: 2 }]`     |
-|                     | @EndUserText.label: 'Customer Home Country' |
+TravelID
+```abap
+@UI.hidden: true
+```
+OverallStatus
+```abap
+@UI.selectionField: [{ position: 1 }]
+@EndUserText.label: 'Status'
+```
+CustomerHomeCountry
+```abap
+@UI.selectionField: [{ position: 2 }]
+@EndUserText.label: 'Customer Home Country'
+```
   
 After activating ZRAPH_##_C_OVPFilter again, we test our app once more (if you have the app still open, reloading it suffices) and it should look like this:  
 ![(BAS Test App)](./images/CreateInitialOVP/BAS-Run-5.png)  
@@ -133,18 +139,11 @@ Activate ZRAPH_##_I_OVPFilter.
 
 #### Expose the new association in the consumption view ZRAPH_##_C_OVPFilter
 Add the association to the projection list.  
-Add the following annotation to ZRAPH_##_C_OVPFilter:  
-
-| Field name          | Annotation                                                                                 |
-| ------------------- | ------------------------------------------------------------------------------------------ |
-| OverallStatus       | ```abap @Consumption.valueHelpDefinition: [{entity: { name:    'ZRAPH_I_OverallStatus',``` |
-|                     | ```abap                                               element: 'TravelStatus' `} }]```     |
-
+Add the following annotation to field OverallStatus of ZRAPH_##_C_OVPFilter:  
 ```abap
 @Consumption.valueHelpDefinition: [{entity: { name:    'ZRAPH_I_OverallStatus',
                                               element: 'TravelStatus' `} }]
 ```
-
 Activate ZRAPH_##_C_OVPFilter.  
   
 Check the service binding ZRAPH_##_SB_OVP.  
