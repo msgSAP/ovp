@@ -115,7 +115,7 @@ Expose the following entity:
 | --------------------- | ---------- |
 | ZRAPH_I_OverallStatus | Status     |
   
-[__Solution__](./solutions/ZRAPH_%23%23_SD_OVP-2.txt)
+[__Solution__](./solutions/ZRAPH_##_SD_OVP-2.txt)
 
 [Next Step >>](./AddTableCard.md)
 
