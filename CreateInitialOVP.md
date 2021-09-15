@@ -140,7 +140,7 @@ Activate ZRAPH_##_I_OVPFilter.
 
 #### Expose the new association in the consumption view ZRAPH_##_C_OVPFilter
 Add the association to the projection list.  
-Add the following annotation to field OverallStatus of ZRAPH_##_C_OVPFilter:  
+Add the following annotation to field OverallStatus of ZRAPH_##_C_OVPFilter:
 ```abap
 @Consumption.valueHelpDefinition: [{entity: { name:    'ZRAPH_I_OverallStatus',
                                               element: 'TravelStatus' `} }]
