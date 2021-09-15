@@ -32,9 +32,19 @@ Use service definition ZRAPH_##_SD_OVP.
 Use Binding Type: OData V2 - UI.  
 
 ### 5. Create Overview Page in Business Application Studio and test it
-Open the Business Application Studio (BAS).  
-  
-Afterwards navigate to the targets pane and expand the Services folder (see Screenshot at the left).  
+
+#### Open the Business Application Studio (BAS).  
+Go to https://hana.ondemand.com.  
+Sign in to your trial account.  
+Enter your trial account using the button "Go To Your Trial Account".  
+Enter your trial subaccount.  
+On the left pane, click on "Instances and Subscriptions".  
+There you should already have one subscription to the SAP Business Application Studio.  
+Click on that.  
+Choose your devspace (which you should already have created).  
+
+#### Log In to Backend
+Afterwards navigate to the targets pane and expand the Services folder (see Screenshot below).  
 If a log in request appears, log in with your BTP credentials, else you are loged in already.  
 ![(BAS Service Login)](images/OVP/BAS-Service-Login.png)  
 
