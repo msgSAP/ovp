@@ -94,16 +94,17 @@ This is not how we want our filter bar to look.
 We want to have the filter fields available directly on the filter bar without needing to adapt them.  
 Also we want different labels not show the travel id at all.  
 Therefore we add the following annotations to ZRAPH_##_C_OVPFilter:  
-TravelID
+  
+__TravelID:__
 ```abap
 @UI.hidden: true
 ```
-OverallStatus
+__OverallStatus:__
 ```abap
 @UI.selectionField: [{ position: 1 }]
 @EndUserText.label: 'Status'
 ```
-CustomerHomeCountry
+__CustomerHomeCountry:__
 ```abap
 @UI.selectionField: [{ position: 2 }]
 @EndUserText.label: 'Customer Home Country'
