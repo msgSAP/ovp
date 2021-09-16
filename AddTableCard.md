@@ -40,7 +40,7 @@ __CustomerHomeCountry:__
   
 Activate ZRAPH_##_C_OVPTravelsPerAg.  
   
-[__Solution__](./solutions/AddTableCard/ZRAPH_%23%23_C_OVPTravelsPerAg.txt)
+[__Solution__](./solutions/AddTableCard/ZRAPH_%23%23_C_OVPTravelsPerAg-1.txt)
 
 ### 2. Expose ZRAPH_##_C_OVPTravelsPerAg as entity set
 Adapt ZRAPH_##_SD_OVP:  
@@ -88,10 +88,33 @@ card00_title=Travels per Agency
   
 [__Solution__](./solutions/AddTableCard/i18n.properties)  
 
-### 4. Test the app once more
+#### Test the app once more
 In BAS again test the App.  
 It should now look similar to this:  
-![(BAS Add Table Card)](./images/AddTableCard/BAS-Add-Table-Card.png)  
+![(BAS Add Table Card)](./images/AddTableCard/BAS-Add-Table-Card-1.png)  
   
+### 4. Let's sort the table by travel count
+
+#### Add annotations for sorting to the cds view entity
+In ZRAPH_##_C_OVPTravelsPerAg, add the following annotation for the whole view entity:  
+```abap
+@UI.presentationVariant: [
+  { qualifier: 'Table', 
+    sortOrder: [{
+        by:       'TravelsCount', 
+        direction :#DESC 
+      }]}
+]
+```
+Activate ZRAPH_##_C_OVPTravelsPerAg.  
   
+[__Solution__](./solutions/AddTableCard/ZRAPH_%23%23_C_OVPTravelsPerAg-2.txt)
+
+#### Test the app once more
+In BAS again test the App.  
+It should now look similar to this:  
+![(BAS Add Table Card)](./images/AddTableCard/BAS-Add-Table-Card-2.png)  
+
+
+
 [<< Previous Step](./CreateInitialOVP.md) | [Next Step >>](./AddListCard.md)
