@@ -2,4 +2,5 @@
 define service ZRAPH_##_SB_OVP {
   expose ZRAPH_##_C_OVPFilter as OVPFilter;
   expose ZRAPH_I_OverallStatus as Status;
+  expose ZRAPH_##_C_OVPTravelsPerAg as TravelsPerAgency;
 }
