@@ -94,9 +94,11 @@ It should now look similar to this:
 ![(BAS Add Table Card)](./images/AddTableCard/BAS-Add-Table-Card-1.png)  
   
 ### 4. Let's sort the table by travel count
-
+While we see the data we want in principle, we actually want to see the top 5 agencies as measured by travel count by default.  
+Therefore we add some sorting behaviour to our table card.  
 #### Add annotations for sorting to the cds view entity
 In ZRAPH_##_C_OVPTravelsPerAg, add the following annotation for the whole view entity:  
+
 ```abap
 @UI.presentationVariant: [
   { qualifier: 'Table', 
@@ -106,6 +108,7 @@ In ZRAPH_##_C_OVPTravelsPerAg, add the following annotation for the whole view e
       }]}
 ]
 ```
+  
 Activate ZRAPH_##_C_OVPTravelsPerAg.  
   
 [__Solution__](./solutions/AddTableCard/ZRAPH_%23%23_C_OVPTravelsPerAg-2.txt)
@@ -114,7 +117,6 @@ Activate ZRAPH_##_C_OVPTravelsPerAg.
 In BAS again test the App.  
 It should now look similar to this:  
 ![(BAS Add Table Card)](./images/AddTableCard/BAS-Add-Table-Card-2.png)  
-
-
-
+  
+  
 [<< Previous Step](./CreateInitialOVP.md) | [Next Step >>](./AddListCard.md)
