@@ -89,6 +89,9 @@ card00_title=Travels per Agency
 [__Solution__](./solutions/AddTableCard/i18n.properties)  
 
 ### 4. Test the app once more
-In BAS again test 
+In BAS again test the App.  
+It should now look similar to this:  
+![(BAS Add Table Card)](./images/AddTableCard/BAS-Add-Table-Card.png)  
+  
   
 [<< Previous Step](./CreateInitialOVP.md) | [Next Step >>](./AddListCard.md)
