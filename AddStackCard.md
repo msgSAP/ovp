@@ -107,5 +107,5 @@ It should now look similar to this:
 ![(BAS Add List Card)](./images/AddStackCard/BAS-Run-1.png)
 ![(BAS Add List Card)](./images/AddStackCard/BAS-Run-2.png)  
   
-
+  
 [<< Previous Step](./AddListCard.md) | [Next Step >>](./AddLinkListCard.md)
