@@ -13,12 +13,15 @@ as
 select from /dmo/a_travel_d as travel
 inner join /DMO/I_Customer as customer
     on customer.CustomerID = travel.customer_id
-association to ZRAPH_I_OverallStatus as _Status
+association to ZCDSV_TZ_I_OverallStatus as _Status
     on _Status.TravelStatus = travel.overall_status
+association to I_Country as _Country
+    on _Country.Country = customer.CountryCode
 {
     key travel.travel_id as TravelID,
         travel.overall_status as OverallStatus,
         customer.CountryCode as CustomerHomeCountry,
         
-    _Status
+    _Status,
+    _Country
 }

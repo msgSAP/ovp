@@ -121,31 +121,46 @@ However when pressing the value help button, only a generic popup shows up.
 
 ### 7. Add useful value helps for the filter fields
 
-#### Add status entity to service definition ZRAPH_##_SD_OVP
+#### Add status and country entities to service definition ZRAPH_##_SD_OVP
 Expose the following entity:  
 
 | CDS View Entity       | Entity Set |
 | --------------------- | ---------- |
 | ZRAPH_I_OverallStatus | Status     |
+| I_Country             | Country    |
   
 [__Solution__](./solutions/CreateInitialOVP/ZRAPH_%23%23_SD_OVP-2.txt)
 
-#### Add association to the status to ZRAPH_##_I_OVPFilter
+#### Add associations to the status and country to ZRAPH_##_I_OVPFilter
 The association target is ZRAPH_I_OverallStatus.  
 The connection is done using fields TravelStatuns and overall_status of the corresponding views.  
 Alias the association with _Status and expose it in the projection list.  
+  
+The association target is I_Country.  
+The connection is done using fields Country and CountryCode of the corresponding views.  
+Alias the association with _Country and expose it in the projection list.  
 Activate ZRAPH_##_I_OVPFilter.  
-
+  
 [__Solution__](./solutions/CreateInitialOVP/ZRAPH_%23%23_I_OVPFilter-2.txt)
-
+  
 #### Expose the new association in the consumption view ZRAPH_##_C_OVPFilter
 Add the association to the projection list.  
 Add the following annotation to field OverallStatus of ZRAPH_##_C_OVPFilter:  
   
+__OverallStatus:__  
+
 ```abap
 @Consumption.valueHelpDefinition: [{entity: { name:    'ZRAPH_I_OverallStatus',
                                               element: 'TravelStatus' `} }]
 ```
+  
+__CustomerHomeCountry:__  
+  
+```abap
+@Consumption.valueHelpDefinition: [{entity: { name:    'I_Country',
+                                              element: 'Country' } }]
+```
+  
 Activate ZRAPH_##_C_OVPFilter.  
   
 Check the service binding ZRAPH_##_SB_OVP.  
