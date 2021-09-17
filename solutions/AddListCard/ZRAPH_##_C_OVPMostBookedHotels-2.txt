@@ -1,0 +1,41 @@
+@AbapCatalog.viewEnhancementCategory: [#NONE]
+@AccessControl.authorizationCheck: #NOT_REQUIRED
+@EndUserText.label: 'Most Booked Hotels'
+@Metadata.ignorePropagatedAnnotations: true
+@ObjectModel.usageType:{
+    serviceQuality: #X,
+    sizeCategory: #S,
+    dataClass: #MIXED
+}
+
+@UI.presentationVariant: [
+  { qualifier: 'List', 
+    sortOrder: [{
+        by:       'ReservationsCount', 
+        direction :#DESC 
+      }]}
+]
+define view entity ZRAPH_##_C_OVPMostBookedHotels
+  as select from ZRAPH_##_I_RoomReservationWDTP
+{
+  key HotelID,
+      @UI.lineItem: [{
+          qualifier: 'List',
+          label: 'Hotel',
+          position : 1
+      }]
+      _Hotel.name as HotelName,
+      @UI.lineItem: [{
+          qualifier: 'List',
+          type: #AS_DATAPOINT,
+          label: 'Reservation Count',
+          position : 2
+      }]
+      @UI.dataPoint: {
+        title: 'Reservation Count'
+      }
+      count( * )  as ReservationsCount
+}
+group by
+  HotelID,
+  _Hotel.name

@@ -53,7 +53,7 @@ Adapt ZRAPH_##_SD_OVP:
   
 Activate ZRAPH_##_SD_OVP.  
   
-[__Solution__](./solutions/AddListCard/ZRAPH_%23%23_C_OVPMostBookedHotels-1.txt)  
+[__Solution__](./solutions/AddListCard/ZRAPH_%23%23_SD_OVP.txt)  
   
 ### 3. Add list card to OVP
 
@@ -95,7 +95,7 @@ It should now look similar to this:
   
 ### 4. Format the card
 
-Change the annotations:  
+#### Change the annotations of ZRAPH_##_C_OVPMostBookedHotels  
   
 __ReservationsCount (add "type" to @UI.lineItem and @UI.dataPoint as a whole):__  
 ```abap
@@ -109,6 +109,14 @@ __ReservationsCount (add "type" to @UI.lineItem and @UI.dataPoint as a whole):__
     title: 'Reservation Count'
 }
 ```
+  
+[__Solution__](./solutions/AddListCard/ZRAPH_%23%23_C_OVPMostBookedHotels-2.txt)  
+  
+#### Test the app once more
+In BAS again test the App.  
+It should now look similar to this:  
+![(BAS Add List Card)](./images/AddListCard/BAS-Run-2.png)  
+  
   
   
 [<< Previous Step](./AddTableCard.md) | [Next Step >>](./AddStackCard.md)
