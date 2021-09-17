@@ -134,17 +134,17 @@ __OverallStatus:__
 }]
 ```
   
-__TravelsCount:__  
+__TravelsCount (update position value to 3):__  
 ```abap
 @UI.lineItem: [{
     qualifier: 'Table',
     label: 'Travel Count',
-    position : __3__
+    position : 3
 }]
 ```
   
 In BAS again test the app and check the filters.  
-They should now impact the result.  
+The filter Status should now impact the result, while CustomerHomeCountry does not.  
   
 [__Solution__](./solutions/AddTableCard/ZRAPH_%23%23_C_OVPTravelsPerAg-3.txt)
   

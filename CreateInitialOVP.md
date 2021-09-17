@@ -167,8 +167,9 @@ Check the service binding ZRAPH_##_SB_OVP.
 It should now include the following new lines:  
 ![(Service Binding)](./images/CreateInitialOVP/Eclipse-Service-Binding-2.png)  
   
-Again check the app. Press the value help for the status field. It should now look like this:  
-![(BAS Test App)](./images/CreateInitialOVP/BAS-Run-8.png)  
+Again check the app. Press the value help for both filters. It should now look like this:  
+![(BAS Test App)](./images/CreateInitialOVP/BAS-Run-8.png)
+![(BAS Test App)](./images/CreateInitialOVP/BAS-Run-9.png)  
   
 [__Solution__](./solutions/CreateInitialOVP/ZRAPH_%23%23_C_OVPFilter-3.txt)
   
