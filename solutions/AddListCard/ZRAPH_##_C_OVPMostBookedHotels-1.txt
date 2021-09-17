@@ -1,0 +1,19 @@
+@AbapCatalog.viewEnhancementCategory: [#NONE]
+@AccessControl.authorizationCheck: #NOT_REQUIRED
+@EndUserText.label: 'Most Booked Hotels'
+@Metadata.ignorePropagatedAnnotations: true
+@ObjectModel.usageType:{
+    serviceQuality: #X,
+    sizeCategory: #S,
+    dataClass: #MIXED
+}
+define view entity ZRAPH_TZ_C_OVPMostBookedHotels
+  as select from ZRAPH_TZ_I_RoomReservationWDTP
+{
+  key HotelID,
+      _Hotel.name as HotelName,
+      count( * )  as ReservationsCount
+}
+group by
+  HotelID,
+  _Hotel.name
