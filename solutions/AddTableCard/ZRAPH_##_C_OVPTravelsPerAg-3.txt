@@ -21,21 +21,24 @@ define view entity ZRAPH_##_C_OVPTravelsPerAg
 as
 select from ZRAPH_##_I_TravelWDTP
 {
-      @UI.lineItem: [
-        {
-          qualifier: 'Table',
-          label: 'Agency ID',
-          position : 1
-        }
-      ]
   key AgencyID,
       @UI.lineItem: [
         {
           qualifier: 'Table',
           label: 'Agency',
+          position : 1
+        }
+      ]
+
+      @UI.lineItem: [
+        {
+          qualifier: 'Table',
+          label: 'Status',
           position : 2
         }
       ]
+      OverallStatus,
+
       _Agency.Name as AgencyName,
       @UI.lineItem: [
         {
@@ -46,8 +49,6 @@ select from ZRAPH_##_I_TravelWDTP
       ]
       count( * ) as TravelsCount,
       
-      OverallStatus,
-      min( _Customer.CountryCode ) as CustomerHomeCountry
 }
 group by
   AgencyID,

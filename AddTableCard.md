@@ -13,28 +13,21 @@ Base this new view entity on ZRAPH_##_I_TravelWDTP.
   
 Add the following annotations to provide the metadata for the table:  
   
-__AgencyID:__
-```abap
-@UI.lineItem: [{
-    qualifier: 'Table',
-    label: 'Agency ID',
-    position : 1
-}]
-```
-__AgencyName:__
+__AgencyName:__  
 ```abap
 @UI.lineItem: [{
     qualifier: 'Table',
     label: 'Agency',
-    position : 2
+    position : 1
 }]
 ```
-__CustomerHomeCountry:__
+  
+__CustomerHomeCountry:__  
 ```abap
 @UI.lineItem: [{
     qualifier: 'Table',
     label: 'Travel Count',
-    position : 3
+    position : 2
 }]
 ```
   
@@ -122,15 +115,33 @@ It should now look similar to this:
 Now when you test the filters in the filter bar, you will notice that this has no impact on the table card.  
 This is because the filters are pushed down to all cards via name equality.  
 As our filter fields are called "OverallStatus" and "CustomerHomeCountry" and we have no equal field in our ZRAPH_##_C_OVPTravelsPerAg, this equality is not given.  
-Therefore we need to add the following fields:  
+Therefore we need to add the following field inbetween AgencyName and TravelsCount:  
 
 | Source                                | Field name          | Is key |
 | ------------------------------------- | ------------------- | ------ |
 | *ZRAPH_##_I_TravelWDTP.*OverallStatus | OverallStatus       | No     |
-| min( _Customer.CountryCode )          | CustomerHomeCountry | No     |
   
 *OverallStatus needs to be added to the group by clause*  
-*Note: we take the minimum of the country code to keep the granularity of the agency but still be able to filter for it*  
+  
+Add/Change the following annotations:  
+  
+__OverallStatus:__  
+```abap
+@UI.lineItem: [{
+    qualifier: 'Table',
+    label: 'Status',
+    position : 2
+}]
+```
+  
+__TravelsCount:__  
+```abap
+@UI.lineItem: [{
+    qualifier: 'Table',
+    label: 'Travel Count',
+    position : __3__
+}]
+```
   
 In BAS again test the app and check the filters.  
 They should now impact the result.  

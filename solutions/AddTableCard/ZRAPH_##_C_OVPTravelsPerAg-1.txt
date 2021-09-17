@@ -11,19 +11,12 @@ define view entity ZRAPH_##_C_OVPTravelsPerAg
 as
 select from ZRAPH_##_I_TravelWDTP
 {
-      @UI.lineItem: [
-        {
-          qualifier: 'Table',
-          label: 'Agency ID',
-          position : 1
-        }
-      ]
   key AgencyID,
       @UI.lineItem: [
         {
           qualifier: 'Table',
           label: 'Agency',
-          position : 2
+          position : 1
         }
       ]
       _Agency.Name as AgencyName,
@@ -31,7 +24,7 @@ select from ZRAPH_##_I_TravelWDTP
         {
           qualifier: 'Table',
           label: 'Travel Count',
-          position : 3
+          position : 2
         }
       ]
       count( * ) as TravelsCount
