@@ -118,5 +118,24 @@ In BAS again test the App.
 It should now look similar to this:  
 ![(BAS Add Table Card)](./images/AddTableCard/BAS-Add-Table-Card-2.png)  
   
+### 5. Make the filters work
+Now when you test the filters in the filter bar, you will notice that this has no impact on the table card.  
+This is because the filters are pushed down to all cards via name equality.  
+As our filter fields are called "OverallStatus" and "CustomerHomeCountry" and we have no equal field in our ZRAPH_##_C_OVPTravelsPerAg, this equality is not given.  
+Therefore we need to add the following fields:  
+
+| Source                                | Field name          | Is key |
+| ------------------------------------- | ------------------- | ------ |
+| *ZRAPH_##_I_TravelWDTP.*OverallStatus | OverallStatus       | No     |
+| min( _Customer.CountryCode )          | CustomerHomeCountry | No     |
+  
+*OverallStatus needs to be added to the group by clause*  
+*Note: we take the minimum of the country code to keep the granularity of the agency but still be able to filter for it*  
+  
+In BAS again test the app and check the filters.  
+They should now impact the result.  
+  
+[__Solution__](./solutions/AddTableCard/ZRAPH_%23%23_C_OVPTravelsPerAg-3.txt)
+  
   
 [<< Previous Step](./CreateInitialOVP.md) | [Next Step >>](./AddListCard.md)
