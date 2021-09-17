@@ -63,5 +63,46 @@ Activate ZRAPH_##_SD_OVP.
   
 [__Solution__](./solutions/AddLinkListCard/ZRAPH_%23%23_SD_OVP.txt)  
   
+### 3. Add list card to OVP
+
+#### Configure the card
+
+In BAS open file webapp/manifest.json and scroll down to section "sap.ovp".  
+Enhance the already existing "cards : {}" entry to the following:  
+```json
+"card03": {
+    "model": "mainService",
+    "template": "sap.ovp.cards.linklist",
+    "settings": {
+        "title": "{{card03_title}}",
+        "subtitle": "{{card03_subtitle}}",
+        "listFlavor": "standard",
+        "entitySet": "Traveler",
+        "sortBy": "LastName",
+        "sortOrder": "ascending",
+        "headerAnnotationPath": "com.sap.vocabularies.UI.v1.HeaderInfo",
+        "identificationAnnotationPath": "com.sap.vocabularies.UI.v1.Identification"
+    }
+}
+```
+  
+[__Solution__](./solutions/AddLinkListCard/manifest.json)  
+  
+#### Define the translatable title text
+
+In BAS open file webapp/i18n/i18n.properties.  
+Add the card title as follows:  
+```properties
+#XTIT: Table Card Title
+card01_title=Most booked Hotels
+```
+  
+[__Solution__](./solutions/AddLinkListCard/i18n.properties)  
+  
+#### Test the app once more
+In BAS again test the App.  
+It should now look similar to this:  
+![(BAS Add List Card)](./images/AddLinkListCard/BAS-Run-1.png)
+  
 
 [<< Previous Step](./AddStackCard.md) | [Next Step >>](./AddAnalyticalCard.md)
