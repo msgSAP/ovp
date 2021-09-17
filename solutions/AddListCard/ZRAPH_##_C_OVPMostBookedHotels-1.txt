@@ -7,11 +7,21 @@
     sizeCategory: #S,
     dataClass: #MIXED
 }
-define view entity ZRAPH_TZ_C_OVPMostBookedHotels
-  as select from ZRAPH_TZ_I_RoomReservationWDTP
+define view entity ZRAPH_##_C_OVPMostBookedHotels
+  as select from ZRAPH_##_I_RoomReservationWDTP
 {
   key HotelID,
+      @UI.lineItem: [{
+          qualifier: 'List',
+          label: 'Hotel',
+          position : 1
+      }]
       _Hotel.name as HotelName,
+      @UI.lineItem: [{
+          qualifier: 'List',
+          label: 'Reservation Count',
+          position : 2
+      }]
       count( * )  as ReservationsCount
 }
 group by

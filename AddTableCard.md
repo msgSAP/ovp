@@ -22,7 +22,7 @@ __AgencyName:__
 }]
 ```
   
-__CustomerHomeCountry:__  
+__TravelsCount:__  
 ```abap
 @UI.lineItem: [{
     qualifier: 'Table',
