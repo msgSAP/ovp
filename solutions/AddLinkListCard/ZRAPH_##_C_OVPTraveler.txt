@@ -1,0 +1,41 @@
+@AbapCatalog.viewEnhancementCategory: [#NONE]
+@AccessControl.authorizationCheck: #NOT_REQUIRED
+@EndUserText.label: 'Traveler'
+@Metadata.ignorePropagatedAnnotations: true
+@ObjectModel.usageType:{
+    serviceQuality: #X,
+    sizeCategory: #S,
+    dataClass: #MIXED
+}
+
+@UI.headerInfo: {
+  typeName: 'Traveler',
+  typeNamePlural: 'Travelers',
+  title: {
+    label: 'First Name',
+    value: 'FirstName',
+    type: #STANDARD
+  },
+  description: {
+    label: 'Name',
+    value: 'FullName',
+    type: #STANDARD
+  }
+}
+
+define view entity ZRAPH_##_C_OVPTraveler
+  as select from /dmo/customer
+{
+  key customer_id   as TravelerID,
+      first_name    as FirstName,
+      last_name     as LastName,
+      
+      @Semantics.name.fullName: true
+      concat_with_space(first_name, last_name, 1) as FullName,
+
+      @Semantics.eMail.address: true
+      @Semantics.eMail.type:  [#WORK, #PREF]
+      email_address as EMailAddress,
+      @Semantics.telephone.type:  [ #PREF , #WORK]
+      phone_number  as PhoneNumber
+}
