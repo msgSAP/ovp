@@ -86,5 +86,29 @@ Add the card title as follows:
 card01_title=Most booked Hotels
 ```
   
+[__Solution__](./solutions/AddListCard/i18n.properties)  
+  
+#### Test the app once more
+In BAS again test the App.  
+It should now look similar to this:  
+![(BAS Add List Card)](./images/AddListCard/BAS-Run-1.png)  
+  
+### 4. Format the card
+
+Change the annotations:  
+  
+__ReservationsCount (add "type" to @UI.lineItem and @UI.dataPoint as a whole):__  
+```abap
+@UI.lineItem: [{
+    qualifier: 'List',
+    type: #AS_DATAPOINT,
+    label: 'Reservation Count',
+    position : 2
+}]
+@UI.dataPoint: {
+    title: 'Reservation Count'
+}
+```
+  
   
 [<< Previous Step](./AddTableCard.md) | [Next Step >>](./AddStackCard.md)
