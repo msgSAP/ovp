@@ -103,6 +103,7 @@ card01_title=Most booked Hotels
 In BAS again test the App.  
 It should now look similar to this:  
 ![(BAS Add List Card)](./images/AddLinkListCard/BAS-Run-1.png)
+![(BAS Add List Card)](./images/AddLinkListCard/BAS-Run-2.png)  
   
 
 [<< Previous Step](./AddStackCard.md) | [Next Step >>](./AddAnalyticalCard.md)
