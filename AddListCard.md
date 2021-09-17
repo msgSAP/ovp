@@ -9,9 +9,9 @@ Base this new view entity on ZRAPH_##_I_RoomReservationWDTP.
 | _Hotel.name                     | HotelName         | No     |
 | count( * )                      | ReservationsCount | No     |
   
-Add the following annotations to provide the metadata for the table:  
+Add the following annotations to provide the metadata for the view entity:  
   
-__To the table itself__
+__To the view entity itself__
 ```abap
 @UI.presentationVariant: [
   { qualifier: 'List', 

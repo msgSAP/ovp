@@ -11,7 +11,7 @@ Base this new view entity on ZRAPH_##_I_TravelWDTP.
   
 *AgencyID and _Agency.Name need to be added to a group by clause*  
   
-Add the following annotations to provide the metadata for the table:  
+Add the following annotations to provide the metadata for the view entity:  
   
 __AgencyName:__  
 ```abap
