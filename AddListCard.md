@@ -118,5 +118,4 @@ It should now look similar to this:
 ![(BAS Add List Card)](./images/AddListCard/BAS-Run-2.png)  
   
   
-  
 [<< Previous Step](./AddTableCard.md) | [Next Step >>](./AddStackCard.md)
