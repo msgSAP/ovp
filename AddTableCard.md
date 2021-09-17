@@ -53,19 +53,19 @@ Activate ZRAPH_##_SD_OVP.
 In BAS open file webapp/manifest.json and scroll down to section "sap.ovp".  
 Enhance the already existing "cards : {}" entry to the following:  
 ```json
-        "cards": {
-            "card00": {
-                "model": "mainService",
-                "template": "sap.ovp.cards.table",
-                "settings": {
-                    "title": "{{card00_title}}",
-                    "entitySet": "TravelsPerAgency",
-                    "addODataSelect": false,
-                    "presentationAnnotationPath": "com.sap.vocabularies.UI.v1.PresentationVariant#Table",
-                    "annotationPath": "com.sap.vocabularies.UI.v1.LineItem#Table"
-                }
-            }
+"cards": {
+    "card00": {
+        "model": "mainService",
+        "template": "sap.ovp.cards.table",
+        "settings": {
+            "title": "{{card00_title}}",
+            "entitySet": "TravelsPerAgency",
+            "addODataSelect": false,
+            "presentationAnnotationPath": "com.sap.vocabularies.UI.v1.PresentationVariant#Table",
+            "annotationPath": "com.sap.vocabularies.UI.v1.LineItem#Table"
         }
+    }
+}
 ```
   
 [__Solution__](./solutions/AddTableCard/manifest.json)  

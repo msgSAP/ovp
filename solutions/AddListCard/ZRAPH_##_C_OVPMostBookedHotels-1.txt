@@ -7,6 +7,14 @@
     sizeCategory: #S,
     dataClass: #MIXED
 }
+
+@UI.presentationVariant: [
+  { qualifier: 'List', 
+    sortOrder: [{
+        by:       'ReservationsCount', 
+        direction :#DESC 
+      }]}
+]
 define view entity ZRAPH_##_C_OVPMostBookedHotels
   as select from ZRAPH_##_I_RoomReservationWDTP
 {
