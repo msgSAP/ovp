@@ -68,7 +68,7 @@ Activate ZRAPH_##_SD_OVP.
 #### Configure the card
 
 In BAS open file webapp/manifest.json and scroll down to section "sap.ovp".  
-Enhance the already existing "cards : {}" entry to the following:  
+Enhance the already existing "cards : {}" entry with the following:  
 ```json
 "card03": {
     "model": "mainService",

@@ -1,0 +1,41 @@
+@AbapCatalog.viewEnhancementCategory: [#NONE]
+@AccessControl.authorizationCheck: #NOT_REQUIRED
+@EndUserText.label: 'Figure Development'
+@Metadata.ignorePropagatedAnnotations: true
+@ObjectModel.usageType:{
+    serviceQuality: #X,
+    sizeCategory: #S,
+    dataClass: #MIXED
+}
+
+@UI.chart: [
+  {
+    qualifier: 'Donut',
+    title: 'in USD',
+    chartType: #DONUT,
+    dimensions: ['AgencyName'],
+    measures: ['Price'],    
+    measureAttributes: [
+      {
+        measure: 'Price',
+        role: #AXIS_1
+      }
+    ],
+    dimensionAttributes: [
+        {
+          dimension: 'AgencyName',
+          role: #CATEGORY
+        }
+    ]
+  }
+]
+define view entity ZRAPH_##_C_OVPFigureDevelopmnt
+  as select from ZRAPH_##_I_OVPFigureDevelopmnt
+{
+  key AgencyID,
+      CurrencyCode,
+
+      @Semantics.amount.currencyCode: 'CurrencyCode'
+      Price,
+      AgencyName
+}
