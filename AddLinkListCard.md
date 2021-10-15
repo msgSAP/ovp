@@ -96,7 +96,7 @@ Add the card title as follows:
 #XTIT: Link List Card Title
 card03_title=Traveler
 #XTIT: Link List Card Title
-card03_subtitle=Contact Information
+card03_subtitle=All
 ```
   
 [__Solution__](./solutions/AddLinkListCard/i18n.properties)  
