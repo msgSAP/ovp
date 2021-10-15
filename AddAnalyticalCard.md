@@ -80,7 +80,7 @@ Enhance the already existing "cards : {}" entry with the following:
 }
 ```
   
-[__Solution__](./solutions/AddAnalyticalCard/manifest.json)  
+[__Solution__](./solutions/AddAnalyticalCard/manifest-1.json)  
   
 #### Define the translatable title text
 
@@ -109,6 +109,8 @@ Enhance the settings section of the analycitcal card entry with the following:
     "cols": 2
 }
 ```
+  
+[__Solution__](./solutions/AddAnalyticalCard/manifest-2.json)  
   
 In BAS again test the App.  
 The analytical card should now look similar to this:  
