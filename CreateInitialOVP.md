@@ -152,7 +152,7 @@ __OverallStatus:__
 
 ```abap
 @Consumption.valueHelpDefinition: [{entity: { name:    'ZRAPH_I_OverallStatus',
-                                              element: 'TravelStatus' `} }]
+                                              element: 'TravelStatus' } }]
 ```
   
 __CustomerHomeCountry:__  
