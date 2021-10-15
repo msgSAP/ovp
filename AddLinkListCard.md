@@ -93,9 +93,9 @@ Enhance the already existing "cards : {}" entry with the following:
 In BAS open file webapp/i18n/i18n.properties.  
 Add the card title as follows:  
 ```properties
-#XTIT: Link List Card Title
+#XTIT: Link List Title
 card03_title=Traveler
-#XTIT: Link List Card Title
+#XTIT: Link List Title
 card03_subtitle=All
 ```
   
