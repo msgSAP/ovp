@@ -29,7 +29,8 @@ select from ZRAPH_##_I_TravelWDTP
           position : 1
         }
       ]
-
+      _Agency.Name as AgencyName,
+      
       @UI.lineItem: [
         {
           qualifier: 'Table',
@@ -39,7 +40,6 @@ select from ZRAPH_##_I_TravelWDTP
       ]
       OverallStatus,
 
-      _Agency.Name as AgencyName,
       @UI.lineItem: [
         {
           qualifier: 'Table',

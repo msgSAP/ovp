@@ -20,6 +20,7 @@ select from ZRAPH_##_I_TravelWDTP
         }
       ]
       _Agency.Name as AgencyName,
+      
       @UI.lineItem: [
         {
           qualifier: 'Table',
