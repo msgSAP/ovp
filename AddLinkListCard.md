@@ -93,8 +93,10 @@ Enhance the already existing "cards : {}" entry with the following:
 In BAS open file webapp/i18n/i18n.properties.  
 Add the card title as follows:  
 ```properties
-#XTIT: Table Card Title
-card01_title=Most booked Hotels
+#XTIT: Link List Card Title
+card03_title=Traveler
+#XTIT: Link List Card Title
+card03_subtitle=Contact Information
 ```
   
 [__Solution__](./solutions/AddLinkListCard/i18n.properties)  
