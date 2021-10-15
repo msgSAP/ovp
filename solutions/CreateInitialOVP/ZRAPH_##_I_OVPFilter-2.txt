@@ -18,8 +18,8 @@ association to ZCDSV_TZ_I_OverallStatus as _Status
 association to I_Country as _Country
     on _Country.Country = customer.CountryCode
 {
-    key travel.travel_id as TravelID,
-        travel.overall_status as OverallStatus,
+    key travel.TravelID as TravelID,
+        travel.OverallStatus as OverallStatus,
         customer.CountryCode as CustomerHomeCountry,
         
     _Status,
