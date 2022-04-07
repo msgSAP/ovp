@@ -70,7 +70,8 @@ As module name choose "travel_ovp_##".
 As application title choose "Travel Overview".  
 As namespace choose "com.erp.ovp".  
 As description choose "Travel Overview".  
-Leave the project folder path at "/home/user/projects".  
+Leave the project folder path at "/home/user/projects".
+**Important:** Choose minimum SAPUI5 version "1.71.19"!  
 Also leave all 3 radio buttons at "No".  
 Press the "Finish" button below.  
   
@@ -78,9 +79,7 @@ At the right in the project explorer you see a new folder "travel_ovp_##".
 ![(BAS Create Project)](./images/CreateInitialOVP/BAS-Create-Project-3.png)  
 
 #### Test the application
-Go to the run configuration pane and press the run button on the first of the 3 automatically created configurations.  
-![(BAS Test App)](./images/CreateInitialOVP/BAS-Run-1.png)  
-Or press CTRL+SHIFT+P and type "Preview App" and select the item "Fiori: Preview Application".  
+Press CTRL+SHIFT+P and type "Preview App" and select the item "Fiori: Preview Application" and choose the first script "start".  
 ![(BAS Test App)](./images/CreateInitialOVP/BAS-Run-2.png)  
   
 Your app should now look like this:  
