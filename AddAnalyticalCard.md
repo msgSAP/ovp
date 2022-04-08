@@ -1,7 +1,7 @@
 # Add an analytical card to the Overview Page
 
 ### 1. Create CDS View Entity ZRAPH_##_I_OVPFigureDevelopmnt
-Base this new view entity on ZRAPH_I_TravelWDTP.  
+Base this new view entity on ZRAPH_##_I_TravelWDTP.  
 
 | Source                                    | Field name          | Is key |
 | ----------------------------------------- | ------------------- | ------ |
