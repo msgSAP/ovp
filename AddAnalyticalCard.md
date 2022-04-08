@@ -88,7 +88,7 @@ In BAS open file webapp/i18n/i18n.properties.
 Add the card title as follows:  
 ```properties
 #XTIT: Analytical Card
-card04_title=Figures per US Agency
+card04_title=Turnover per US Agency
 ```
   
 [__Solution__](./solutions/AddAnalyticalCard/i18n.properties)  
