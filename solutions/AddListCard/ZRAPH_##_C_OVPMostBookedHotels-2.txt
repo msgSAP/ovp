@@ -24,7 +24,7 @@ define view entity ZRAPH_##_C_OVPMostBookedHotels
           label: 'Hotel',
           position : 1
       }]
-      _Hotel.name as HotelName,
+      _Hotel.Name as HotelName,
       @UI.lineItem: [{
           qualifier: 'List',
           type: #AS_DATAPOINT,
@@ -38,4 +38,4 @@ define view entity ZRAPH_##_C_OVPMostBookedHotels
 }
 group by
   HotelID,
-  _Hotel.name
+  _Hotel.Name

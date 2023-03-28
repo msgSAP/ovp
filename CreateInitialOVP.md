@@ -114,17 +114,7 @@ However when pressing the value help button, only a generic popup shows up.
 [__Solution__](./solutions/CreateInitialOVP/ZRAPH_%23%23_C_OVPFilter-2.txt)
 
 ### 7. Add useful value helps for the filter fields
-
-#### Add status and country entities to service definition ZRAPH_##_SD_OVP
-Expose the following entity:  
-
-| CDS View Entity       | Entity Set |
-| --------------------- | ---------- |
-| ZRAPH_I_OverallStatus | Status     |
-| I_Country             | Country    |
   
-[__Solution__](./solutions/CreateInitialOVP/ZRAPH_%23%23_SD_OVP-2.txt)
-
 #### Add associations to the status and country to ZRAPH_##_I_OVPFilter
 The association target is ZRAPH_I_OverallStatus.  
 The connection is done using fields TravelStatuns and overall_status of the corresponding views.  

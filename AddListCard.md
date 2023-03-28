@@ -3,11 +3,11 @@
 ### 1. Create CDS View Entity ZRAPH_##_C_OVPMostBookedHotels
 Base this new view entity on ZRAPH_##_I_RoomReservationWDTP.  
   
-| Source                          | Field name        | Is key |
-| ------------------------------- | ----------------- | ------ |
-| *ZRAPH_##_I_TravelWDTP.*HotelID | HotelID           | Yes    |
-| _Hotel.name                     | HotelName         | No     |
-| count( * )                      | ReservationsCount | No     |
+| Source      | Field name        | Is key |
+| ----------- | ----------------- | ------ |
+| HotelID     | HotelID           | Yes    |
+| _Hotel.Name | HotelName         | No     |
+| count( * )  | ReservationsCount | No     |
   
 Add the following annotations to provide the metadata for the view entity:  
   
