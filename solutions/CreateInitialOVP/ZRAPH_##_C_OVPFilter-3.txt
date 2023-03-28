@@ -15,7 +15,7 @@ define view entity ZRAPH_##_C_OVPFilter
   key TravelID,
       @UI.selectionField: [{ position: 1 }]
       @EndUserText.label: 'Status'
-      @Consumption.valueHelpDefinition: [{entity: { name:    'ZCDSV_TZ_I_OverallStatus',
+      @Consumption.valueHelpDefinition: [{entity: { name:    'ZRAPH_I_OverallStatus',
                                                     element: 'TravelStatus' } }]
       OverallStatus,
       @UI.selectionField: [{ position: 2 }]

@@ -10,18 +10,12 @@
 
 define view entity ZRAPH_##_I_OVPFilter
 as
-select from ZRAPH_##_I_TravelWDTP as travel
-inner join /DMO/I_Customer as customer
-    on customer.CustomerID = travel.customer_id
-association to ZRAPH_##_I_OverallStatus as _Status
-    on _Status.TravelStatus = travel.overall_status
-association to I_Country as _Country
-    on _Country.Country = customer.CountryCode
+select from ZRAPH_##_I_TravelWDTP
 {
-    key travel.TravelID as TravelID,
-        travel.OverallStatus as OverallStatus,
-        customer.CountryCode as CustomerHomeCountry,
-        
-    _Status,
-    _Country
+    key TravelID,
+        OverallStatus,
+        _Customer.CountryCode as CustomerHomeCountry,
+
+        _TravelStatus as _Status,
+        _Customer._Country
 }

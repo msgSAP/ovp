@@ -5,15 +5,17 @@ This CDS View Entity (together with its consumption view) represents the filter 
 We want to filter for the overall status and customers home country.  
   
 As primary source for the CDS View Entity we use ZRAPH_##_I_TravelWDTP.  
-To get access to the customers home country, we join in /DMO/I_Customer.  
+To get access to the customers home country, we need the data of /DMO/I_Customer.  
+This view entity could be joined in here, but we already have an association to it defined and exposed in ZRAPH_##_I_TravelWDTP.  
+So, find and use this association.  
   
 Following fields need to be put in the projection list:  
 
-| Source                              | Field name          | Is key |
-| ----------------------------------- | ------------------- | ------ |
-| ZRAPH_##_I_TravelWDTP.TravelID      | TravelID            | Yes    |
-| ZRAPH_##_I_TravelWDTP.OverallStatus | OverallStatus       | No     |
-| /DMO/I_Customer.CountryCode         | CustomerHomeCountry | No     |
+| Source                                | Field name          | Is key |
+| ------------------------------------- | ------------------- | ------ |
+| ZRAPH_##_I_TravelWDTP.TravelID        | TravelID            | Yes    |
+| ZRAPH_##_I_TravelWDTP.OverallStatus   | OverallStatus       | No     |
+| "association_to_customer".CountryCode | CustomerHomeCountry | No     |
   
 [__Solution__](./solutions/CreateInitialOVP/ZRAPH_%23%23_I_OVPFilter-1.txt)
 
@@ -39,14 +41,7 @@ Use Binding Type: OData V2 - UI.
 ### 5. Create Overview Page in Business Application Studio and test it
 
 #### Open the Business Application Studio (BAS).  
-Go to [https://hana.ondemand.com](https://hana.ondemand.com).
-Sign in to your trial account.  
-Enter your trial account using the button "Go To Your Trial Account".  
-Enter your trial subaccount.  
-On the left pane, click on "Instances and Subscriptions".  
-There you should already have one subscription to the SAP Business Application Studio.  
-Click on that.  
-Choose your devspace (which you should already have created).  
+Before creating the SAP Overviewpage application, make sure that the Install SAP Business Application Studio from the Installation Guide is successfully completed and your SAP Business Application Studio is connected to Cloud Foundry.  
 
 #### Create new project
 Click on "Start from template" in the "Welcome"-Tab.  
@@ -71,11 +66,11 @@ As application title choose "Travel Overview".
 As namespace choose "com.erp.ovp".  
 As description choose "Travel Overview".  
 Leave the project folder path at "/home/user/projects".  
-**Important:** Choose minimum SAPUI5 version "1.71.19"!  
+Leave the minimum SAPUI5 version as it is proposed.  
 Also leave all 3 radio buttons at "No".  
 Press the "Finish" button below.  
   
-At the right in the project explorer you see a new folder "travel_ovp_##".  
+At the left in the project explorer you see a new folder "travel_ovp_##".  
 ![(BAS Create Project)](./images/CreateInitialOVP/BAS-Create-Project-3.png)  
 
 #### Test the application
