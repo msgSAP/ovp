@@ -3,11 +3,11 @@
 ### 1. Create CDS View Entity ZRAPH_##_C_OVPTravelsPerAg
 Base this new view entity on ZRAPH_##_I_TravelWDTP.  
 
-| Source                              | Field name          | Is key |
-| ----------------------------------- | ------------------- | ------ |
-| *ZRAPH_##_I_TravelWDTP.*AgencyID    | AgencyID            | Yes    |
-| _Agency.Name                        | AgencyName          | No     |
-| count( * )                          | TravelsCount        | No     |
+| Source       | Field name          | Is key |
+| ------------ | ------------------- | ------ |
+| AgencyID     | AgencyID            | Yes    |
+| _Agency.Name | AgencyName          | No     |
+| count( * )   | TravelsCount        | No     |
   
 *AgencyID and _Agency.Name need to be added to a group by clause*  
   
@@ -55,7 +55,7 @@ Enhance the already existing "cards : {}" entry to the following:
 ```json
 "cards": {
     "card00": {
-        "model": "mainService",
+        "model": "mainModel",
         "template": "sap.ovp.cards.table",
         "settings": {
             "title": "{{card00_title}}",
@@ -117,9 +117,9 @@ This is because the filters are pushed down to all cards via name equality.
 As our filter fields are called "OverallStatus" and "CustomerHomeCountry" and we have no equal field in our ZRAPH_##_C_OVPTravelsPerAg, this equality is not given.  
 Therefore we need to add the following field inbetween AgencyName and TravelsCount:  
 
-| Source                                | Field name          | Is key |
-| ------------------------------------- | ------------------- | ------ |
-| *ZRAPH_##_I_TravelWDTP.*OverallStatus | OverallStatus       | No     |
+| Source        | Field name          | Is key |
+| ------------- | ------------------- | ------ |
+| OverallStatus | OverallStatus       | No     |
   
 *OverallStatus needs to be added to the group by clause*  
   

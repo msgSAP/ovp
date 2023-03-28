@@ -47,8 +47,7 @@ select from ZRAPH_##_I_TravelWDTP
           position : 3
         }
       ]
-      count( * ) as TravelsCount,
-      
+      count( * ) as TravelsCount      
 }
 group by
   AgencyID,
