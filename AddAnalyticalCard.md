@@ -3,15 +3,16 @@
 ### 1. Create CDS View Entity ZRAPH_##_I_OVPFigureDevelopmnt
 Base this new view entity on ZRAPH_##_I_TravelWDTP.  
 
-| Source                                    | Field name          | Is key |
-| ----------------------------------------- | ------------------- | ------ |
-| *ZRAPH_##_I_TravelWDTP.*AgencyID          | AgencyID            | Yes    |
-| *ZRAPH_##_I_TravelWDTP.*CurrencyCode      | CurrencyCode        | No     |
-| sum(*ZRAPH_##_I_TravelWDTP.*total_price)  | Price               | No     |
-| _Agency.Name                              | AgencyName          | No     |
+| Source          | Field name   | Is key |
+| --------------- | ------------ | ------ |
+| AgencyID        | AgencyID     | Yes    |
+| CurrencyCode    | CurrencyCode | No     |
+| sum(TotalPrice) | Price        | No     |
+| _Agency.Name    | AgencyName   | No     |
   
 *AgencyID, CurrencyCode and _Agency.Name need to be added to a group by clause*  
 "CurrencyCode" shall set as the currency for "Price".  
+As reminder, this is the annotation: @Semantics.amount.currencyCode: 'CurrencyCode'  
 Add a where-clause to only include US agencies (_Agency.CountryCode = 'US')  
   
 Activate ZRAPH_##_I_OVPFigureDevelopmnt.  
@@ -70,7 +71,7 @@ In BAS open file webapp/manifest.json and scroll down to section "sap.ovp".
 Enhance the already existing "cards : {}" entry with the following:  
 ```json
 "card04": {
-    "model": "mainService",
+    "model": "mainModel",
     "template": "sap.ovp.cards.charts.analytical",
     "settings": {
         "title": "{{card04_title}}",

@@ -5,12 +5,12 @@ Base this new view entity on /dmo/customer.
   
 | Source                                      | Field name   | Is key |
 | ------------------------------------------- | ------------ | ------ |
-| */dmo/customer.*customer_id                 | TravelerID   | Yes    |
-| */dmo/customer.*first_name                  | FirstName    | No     |
-| */dmo/customer.*last_name                   | LastName     | No     |
+| customer_id                                 | TravelerID   | Yes    |
+| first_name                                  | FirstName    | No     |
+| last_name                                   | LastName     | No     |
 | concat_with_space(first_name, last_name, 1) | FullName     | No     |
-| */dmo/customer.*email_address               | EMailAddress | No     |
-| */dmo/customer.*phone_number                | PhoneNumber  | No     |
+| email_address                               | EMailAddress | No     |
+| phone_number                                | PhoneNumber  | No     |
   
 Add the following annotations to provide the metadata for the view entity:  
   
@@ -71,7 +71,7 @@ In BAS open file webapp/manifest.json and scroll down to section "sap.ovp".
 Enhance the already existing "cards : {}" entry with the following:  
 ```json
 "card03": {
-    "model": "mainService",
+    "model": "mainModel",
     "template": "sap.ovp.cards.linklist",
     "settings": {
         "title": "{{card03_title}}",
@@ -95,6 +95,7 @@ Add the card title as follows:
 ```properties
 #XTIT: Link List Title
 card03_title=Traveler
+
 #XTIT: Link List Title
 card03_subtitle=All
 ```

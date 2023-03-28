@@ -8,14 +8,16 @@
     dataClass: #MIXED
 }
 define view entity ZRAPH_##_I_OVPFigureDevelopmnt
-  as select from /DMO/I_Travel_M as travel
+  as select from ZRAPH_##_I_TravelWDTP
 {
-  key travel.agency_id as AgencyID,
-      travel.currency_code as CurrencyCode,
+  key AgencyID,
+      CurrencyCode,
       @Semantics.amount.currencyCode: 'CurrencyCode'
-      sum(travel.total_price) as Price,
-  
-      _Agency.Name as AgencyName
+      sum(TotalPrice) as Price,
+      _Agency.Name    as AgencyName
 }
-where travel._Agency.CountryCode = 'US'
-group by travel.agency_id, travel.currency_code, _Agency.Name
+where _Agency.CountryCode = 'US'
+group by
+    AgencyID,
+    CurrencyCode,
+    _Agency.Name

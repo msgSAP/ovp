@@ -68,7 +68,7 @@ In BAS open file webapp/manifest.json and scroll down to section "sap.ovp".
 Enhance the already existing "cards : {}" entry with the following:  
 ```json
 "card02": {
-    "model": "mainService",
+    "model": "mainModel",
     "template": "sap.ovp.cards.stack",
     "settings": {
         "title": "{{card02_title}}",

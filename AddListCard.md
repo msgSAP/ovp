@@ -63,7 +63,7 @@ In BAS open file webapp/manifest.json and scroll down to section "sap.ovp".
 Enhance the already existing "cards : {}" entry to with following:  
 ```json
 "card01": {
-    "model": "mainService",
+    "model": "mainModel",
     "template": "sap.ovp.cards.list",
     "settings": {
         "title": "{{card01_title}}",
@@ -82,7 +82,7 @@ Enhance the already existing "cards : {}" entry to with following:
 In BAS open file webapp/i18n/i18n.properties.  
 Add the card title as follows:  
 ```properties
-#XTIT: Table Card Title
+#XTIT: List Card Title
 card01_title=Most booked Hotels
 ```
   
