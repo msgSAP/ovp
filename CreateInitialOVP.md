@@ -117,7 +117,7 @@ However when pressing the value help button, only a generic popup shows up.
   
 #### Add associations to the status and country to ZRAPH_##_I_OVPFilter
 The association target is ZRAPH_I_OverallStatus.  
-The connection is done using fields TravelStatuns and overall_status of the corresponding views.  
+The connection is done using fields TravelStatus and overall_status of the corresponding views.  
 Alias the association with _Status and expose it in the projection list.  
   
 The association target is I_Country.  
