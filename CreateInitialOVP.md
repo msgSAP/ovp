@@ -121,7 +121,7 @@ The connection is done using fields TravelStatuns and overall_status of the corr
 Alias the association with _Status and expose it in the projection list.  
   
 The association target is I_Country.  
-The connection is done using fields Country and CountryCode of the corresponding views.  
+The connection is done using fields Country and CustomerHomeCountry of the corresponding views.  
 Alias the association with _Country and expose it in the projection list.  
   
 Activate ZRAPH_##_I_OVPFilter.  
