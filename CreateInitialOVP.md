@@ -4,7 +4,7 @@
 This CDS View Entity (together with its consumption view) represents the filter options for the Overviewpage.  
 We want to filter for the overall status and customers home country.  
   
-As primary source for the CDS View Entity we use ´ZRAPH_##_I_TravelWDTP´.  
+As primary source for the CDS View Entity we use ZRAPH_##_I_TravelWDTP.  
 To get access to the customers home country, we need the data of /DMO/I_Customer.  
 This view entity could be joined in here, but we already have an association to it defined and exposed in ZRAPH_##_I_TravelWDTP.  
 So, find and use this association.  
