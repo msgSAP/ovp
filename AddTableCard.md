@@ -111,10 +111,11 @@ In BAS again test the App.
 It should now look similar to this:  
 ![(BAS Add Table Card)](./images/AddTableCard/BAS-Add-Table-Card-2.png)  
   
-### 5. Make the filters work
+### 5. Make the filter "Status" work
 Now when you test the filters in the filter bar, you will notice that this has no impact on the table card.  
-This is because the filters are pushed down to all cards via name equality.  
-As our filter fields are called "OverallStatus" and "CustomerHomeCountry" and we have no equal field in our ZRAPH_##_C_OVPTravelsPerAg, this equality is not given.  
+This is because the filters are pushed down to all cards via name equality of the fields involved.  
+As our filter fields are called "OverallStatus" and "CustomerHomeCountry" and we have no corresponding fields in our ZRAPH_##_C_OVPTravelsPerAg, this equality is not given.  
+We only want the filter "Status" to work as the home country of any customer is too far fetched for this overview to be useful.  
 Therefore we need to add the following field inbetween AgencyName and TravelsCount:  
 
 | Source        | Field name          | Is key |
