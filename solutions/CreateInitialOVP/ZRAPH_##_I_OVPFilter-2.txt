@@ -15,7 +15,7 @@ select from ZRAPH_##_I_TravelWDTP
     key TravelID,
         OverallStatus,
         _Customer.CountryCode as CustomerHomeCountry,
-
-        _TravelStatus as _Status,
+    
+        _OverallStatus as _Status,
         _Customer._Country
 }

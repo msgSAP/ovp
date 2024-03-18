@@ -8,6 +8,7 @@ As primary source for the CDS View Entity we use ZRAPH\_##\_I\_TravelWDTP.
 To get access to the customers home country, we need the data of /DMO/I_Customer.  
 This view entity could be joined in here, but we already have an association to it defined and exposed in ZRAPH\_##\_I\_TravelWDTP.  
 So, find and use this association.  
+We want to alias this country field because we are placing it in another context now (see Field name in below table).  
   
 Following fields need to be put in the projection list:  
 
@@ -86,7 +87,7 @@ If you press on "Adapt Filters", the 3 fields we defined in the Consumption View
 ### 6. Add filter fields to filter bar and rename them
 This is not how we want our filter bar to look.  
 We want to have the filter fields available directly on the filter bar without needing to adapt them.  
-Also we want different labels not show the travel id at all.  
+Also we want other labels and not show the travel id at all.  
 Therefore we add the following annotations to ZRAPH\_##\_C\_OVPFilter:  
   
 __TravelID:__
@@ -115,28 +116,27 @@ However when pressing the value help button, only a generic popup shows up.
 
 ### 7. Add useful value helps for the filter fields
   
-#### Add associations to the status and country to ZRAPH_##_I_OVPFilter
-The association target is ZRAPH\_I\_OverallStatus.  
-The connection is done using fields TravelStatus and overall_status of the corresponding views.  
-Alias the association with _Status and expose it in the projection list.  
-  
-The association target is I\_Country.  
-The connection is done using fields Country and CustomerHomeCountry of the corresponding views.  
-Alias the association with _Country and expose it in the projection list.  
+#### Reexpose associations to the status and country in ZRAPH_##_I_OVPFilter
+We need associations with targets /DMO/I\_Overall_Status_VH and I_Country.  
+Fortunatelly in ZRAPH\_##\_I\_TravelWDTP we already defined an association to Overall Status.  
+Additionally we already have an association to /DMO/I_Customer, which in turn associates to I_Country.  
+Therefore we can simply reexpose those associations by adding them to the projection list of the CDS View Entity.  
+We want to alias them, though:  
+_OverallStatus as _Status and _Customer._Country as _Country.  
   
 Activate ZRAPH\_##\_I\_OVPFilter.  
   
 [__Solution__](./solutions/CreateInitialOVP/ZRAPH_%23%23_I_OVPFilter-2.txt)
   
 #### Expose the new association in the consumption view ZRAPH_##_C_OVPFilter
-Add the association to the projection list.  
+Add the associations to the projection list.  
 Add the following annotations to fields OverallStatus and CustomerHomeCountry of ZRAPH\_##\_C\_OVPFilter:  
   
 __OverallStatus:__  
 
 ```abap
-@Consumption.valueHelpDefinition: [{entity: { name:    'ZRAPH_I_OverallStatus',
-                                              element: 'TravelStatus' } }]
+@Consumption.valueHelpDefinition: [{entity: { name:    '/DMO/I_Overall_Status_VH',
+                                              element: 'OverallStatus' } }]
 ```
   
 __CustomerHomeCountry:__  
