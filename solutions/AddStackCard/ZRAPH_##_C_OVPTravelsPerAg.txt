@@ -34,13 +34,14 @@ define view entity ZRAPH_##_C_OVPTravelsPerAg
 as
 select from ZRAPH_##_I_TravelWDTP
 {
-      @UI.facet: [
-        { isSummary:        true,
+      @UI.facet: [{
+          isSummary:        true,
           label:            'Agency',
           type:             #FIELDGROUP_REFERENCE,
           targetQualifier:  'AgencyData',
           purpose:          #STANDARD,
-          qualifier:        'Stack' }]
+          qualifier:        'Stack'
+      }]
   key AgencyID,
       @UI.lineItem: [
         {
@@ -49,12 +50,13 @@ select from ZRAPH_##_I_TravelWDTP
           position : 1
         }
       ]
-      @UI.fieldGroup: [
-        { qualifier:  'AgencyData',
+      @UI.fieldGroup: [{
+          qualifier:  'AgencyData',
           type:       #STANDARD,
           groupLabel: 'Agency Data' ,
           label:      'Agency Name',
-          position:   1 }]
+          position:   1
+      }]
       _Agency.Name as AgencyName,
 
       @UI.lineItem: [
@@ -64,10 +66,11 @@ select from ZRAPH_##_I_TravelWDTP
           position : 2
         }
       ]
-      @UI.fieldGroup: [
-        { qualifier:  'AgencyData',
+      @UI.fieldGroup: [{
+          qualifier:  'AgencyData',
           label:      'Overall Status',
-          position:   2 }]
+          position:   2
+      }]
       OverallStatus,
 
 
@@ -78,10 +81,11 @@ select from ZRAPH_##_I_TravelWDTP
           position : 3
         }
       ]
-      @UI.fieldGroup: [
-        { qualifier:  'AgencyData',
+      @UI.fieldGroup: [{ 
+          qualifier:  'AgencyData',
           label:      'Travel Count',
-          position:   2 }]
+          position:   2
+      }]
       count( * )   as TravelsCount
 
 }

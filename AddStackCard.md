@@ -21,39 +21,42 @@ __To the view entity itself__
   
 __AgencyID:__  
 ```abap
-@UI.facet: [
-    { isSummary:        true,
+@UI.facet: [{
+        isSummary:        true,
         label:            'Agency',
         type:             #FIELDGROUP_REFERENCE,
         targetQualifier:  'AgencyData',
         purpose:          #STANDARD,
-        qualifier:        'Stack' }]
+        qualifier:        'Stack'
+}]
 ```
   
 __AgencyName:__  
 ```abap
-@UI.fieldGroup: [
-    { qualifier:  'AgencyData',
+@UI.fieldGroup: [{
+        qualifier:  'AgencyData',
         type:       #STANDARD,
         groupLabel: 'Agency Data' ,
         label:      'Agency Name',
-        position:   1 }]
+        position:   1
+}]
 ```
   
 __OverallStatus:__  
 ```abap
-@UI.fieldGroup: [
-    { qualifier:  'AgencyData',
+@UI.fieldGroup: [{ qualifier:  'AgencyData',
         label:      'Overall Status',
-        position:   2 }]
+        position:   2
+}]
 ```
   
 __TravelsCount:__  
 ```abap
-@UI.fieldGroup: [
-    { qualifier:  'AgencyData',
+@UI.fieldGroup: [{
+        qualifier:  'AgencyData',
         label:      'Travel Count',
-        position:   2 }]
+        position:   2
+}]
 ```
   
 Activate ZRAPH_##_C_OVPTravelsPerAg.  
