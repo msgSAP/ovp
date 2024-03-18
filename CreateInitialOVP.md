@@ -4,9 +4,9 @@
 This CDS View Entity (together with its consumption view) represents the filter options for the Overview Page.  
 We want to filter for the overall status and customers home country.  
   
-As primary source for the CDS View Entity we use ZRAPH\_##\_I\_TravelWDTP`.  
+As primary source for the CDS View Entity we use ZRAPH\_##\_I\_TravelWDTP.  
 To get access to the customers home country, we need the data of /DMO/I_Customer.  
-This view entity could be joined in here, but we already have an association to it defined and exposed in ZRAPH_##_I_TravelWDTP.  
+This view entity could be joined in here, but we already have an association to it defined and exposed in ZRAPH\_##\_I\_TravelWDTP.  
 So, find and use this association.  
   
 Following fields need to be put in the projection list:  
@@ -21,7 +21,7 @@ Following fields need to be put in the projection list:
 
 ### 2. Create the Consumption CDS View Entity ZRAPH_##_C_OVPFilter
 This CDS View Entity adds annotations for the filtering of the OVP.  
-It shall be created as a selection from ZRAPH_##_I_OVPFilter and projects all of its fields.  
+It shall be created as a selection from ZRAPH\_##\_I\_OVPFilter and projects all of its fields.  
   
 [__Solution__](./solutions/CreateInitialOVP/ZRAPH_%23%23_C_OVPFilter-1.txt)
 
@@ -35,7 +35,7 @@ Expose the following entity:
 [__Solution__](./solutions/CreateInitialOVP/ZRAPH_%23%23_SD_OVP-1.txt)
 
 ### 4. Create the service binding ZRAPH_##_SB_OVP and publish it
-Use service definition ZRAPH_##_SD_OVP.  
+Use service definition ZRAPH\_##\_SD\_OVP.  
 Use Binding Type: OData V2 - UI.  
 
 ### 5. Create Overview Page in Business Application Studio and test it
@@ -55,7 +55,7 @@ Press on "Overview Page" and press the "Next" button below.
   
 As data source choose "Connect to a System".  
 As system choose your destination, created in previous lessons.  
-As service choose the service ZRAPH_##_SB_OVP, that you published earlier.  
+As service choose the service ZRAPH\_##\_SB\_OVP, that you published earlier.  
 Press the "Next" button below.  
   
 As filter entity choose the entity OVPFilterType (The "Type" part was added automatically by the system for the OData Service) we defined in the service definition.  
@@ -70,7 +70,7 @@ Leave the minimum SAPUI5 version as it is proposed.
 Also leave all 3 radio buttons at "No".  
 Press the "Finish" button below.  
   
-At the left in the project explorer you see a new folder "travel_ovp_##".  
+At the left in the project explorer you see a new folder "travel\_ovp\_##".  
 ![(BAS Create Project)](./images/CreateInitialOVP/BAS-Create-Project-3.png)  
 
 #### Test the application
@@ -87,7 +87,7 @@ If you press on "Adapt Filters", the 3 fields we defined in the Consumption View
 This is not how we want our filter bar to look.  
 We want to have the filter fields available directly on the filter bar without needing to adapt them.  
 Also we want different labels not show the travel id at all.  
-Therefore we add the following annotations to ZRAPH_##_C_OVPFilter:  
+Therefore we add the following annotations to ZRAPH\_##\_C\_OVPFilter:  
   
 __TravelID:__
 ```abap
@@ -116,21 +116,21 @@ However when pressing the value help button, only a generic popup shows up.
 ### 7. Add useful value helps for the filter fields
   
 #### Add associations to the status and country to ZRAPH_##_I_OVPFilter
-The association target is ZRAPH_I_OverallStatus.  
+The association target is ZRAPH\_I\_OverallStatus.  
 The connection is done using fields TravelStatus and overall_status of the corresponding views.  
 Alias the association with _Status and expose it in the projection list.  
   
-The association target is I_Country.  
+The association target is I\_Country.  
 The connection is done using fields Country and CustomerHomeCountry of the corresponding views.  
 Alias the association with _Country and expose it in the projection list.  
   
-Activate ZRAPH_##_I_OVPFilter.  
+Activate ZRAPH\_##\_I\_OVPFilter.  
   
 [__Solution__](./solutions/CreateInitialOVP/ZRAPH_%23%23_I_OVPFilter-2.txt)
   
 #### Expose the new association in the consumption view ZRAPH_##_C_OVPFilter
 Add the association to the projection list.  
-Add the following annotations to fields OverallStatus and CustomerHomeCountry of ZRAPH_##_C_OVPFilter:  
+Add the following annotations to fields OverallStatus and CustomerHomeCountry of ZRAPH\_##\_C\_OVPFilter:  
   
 __OverallStatus:__  
 
@@ -146,9 +146,9 @@ __CustomerHomeCountry:__
                                               element: 'Country' } }]
 ```
   
-Activate ZRAPH_##_C_OVPFilter.  
+Activate ZRAPH\_##\_C\_OVPFilter.  
   
-Check the service binding ZRAPH_##_SB_OVP.  
+Check the service binding ZRAPH\_##\_SB\_OVP.  
 It should now include the following new lines:  
 ![(Service Binding)](./images/CreateInitialOVP/Eclipse-Service-Binding-2.png)  
   
