@@ -12,4 +12,4 @@
 
 ### [6. Add an analytical card to the Overview Page](./AddAnalyticalCard.md)
 
-### [7. Add the result of a Custom Entity as a Card of your choice](./AddCustEntityCard.md)
+### [7. CHALLENGE: Add the result of a Custom Entity as a Card of your choice](./AddCustEntityCard.md)
