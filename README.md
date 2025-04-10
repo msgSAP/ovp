@@ -12,4 +12,4 @@
 
 ### [6. Add an analytical card to the Overview Page](./AddAnalyticalCard.md)
 
-### [7. Add a navigation to an external web page](./AddNavigationExtWebPage.md)
+### [7. Add the result of a Custom Entity as a Carf of your choice](./AddCustEntityCard.md)
