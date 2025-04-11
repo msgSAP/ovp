@@ -1,185 +1,200 @@
 {
-    "_version": "1.32.0",
+    "_version": "1.65.0",
     "sap.app": {
-        "id": "com.erp.ovp.travelovp##",
-        "type": "application",
-        "i18n": "i18n/i18n.properties",
-        "applicationVersion": {
-            "version": "1.0.0"
+      "id": "com.erp.ovp.travelovp##",
+      "type": "application",
+      "i18n": "i18n/i18n.properties",
+      "applicationVersion": {
+        "version": "0.0.1"
+      },
+      "title": "{{appTitle}}",
+      "description": "{{appDescription}}",
+      "resources": "resources.json",
+      "sourceTemplate": {
+        "id": "@sap/generator-fiori:ovp",
+        "version": "1.17.1",
+        "toolsId": "f6c15ab3-4664-4771-89ab-1afb714ddd60"
+      },
+      "dataSources": {
+        "ZRAPH_##_SD_OVP_VAN": {
+          "uri": "/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Annotations(TechnicalName='ZRAPH_##_SD_OVP_VAN',Version='0001')/$value/",
+          "type": "ODataAnnotation",
+          "settings": {
+            "localUri": "localService/mainService/ZRAPH_##_SD_OVP_VAN.xml"
+          }
         },
-        "title": "{{appTitle}}",
-        "description": "{{appDescription}}",
-        "tags": {
-            "keywords": []
+        "annotation": {
+          "type": "ODataAnnotation",
+          "uri": "annotations/annotation.xml",
+          "settings": {
+            "localUri": "annotations/annotation.xml"
+          }
         },
-        "dataSources": {
-            "mainService": {
-                "uri": "/sap/opu/odata/sap/ZRAPH_##_SB_OVP/",
-                "type": "OData",
-                "settings": {
-                    "annotations": [
-                        "ZRAPH_##_SB_OVP_VAN",
-                        "annotation"
-                    ],
-                    "localUri": "localService/metadata.xml",
-                    "odataVersion": "2.0"
-                }
-            },
-            "ZRAPH_##_SB_OVP_VAN": {
-                "uri": "/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Annotations(TechnicalName='ZRAPH_##_SB_OVP_VAN',Version='0001')/$value/",
-                "type": "ODataAnnotation",
-                "settings": {
-                    "localUri": "localService/ZRAPH_##_SB_OVP_VAN.xml"
-                }
-            },
-            "annotation": {
-                "type": "ODataAnnotation",
-                "uri": "annotations/annotation.xml",
-                "settings": {
-                    "localUri": "annotations/annotation.xml"
-                }
-            }
-        },
-        "offline": false,
-        "sourceTemplate": {
-            "id": "OVP.smartovptemplate",
-            "version": "1.41.1"
+        "mainService": {
+          "uri": "/sap/opu/odata/sap/ZRAPH_##_SD_OVP/",
+          "type": "OData",
+          "settings": {
+            "annotations": [
+              "ZRAPH_##_SD_OVP_VAN",
+              "annotation"
+            ],
+            "localUri": "localService/mainService/metadata.xml",
+            "odataVersion": "2.0"
+          }
         }
+      }
     },
     "sap.ui": {
-        "technology": "UI5",
-        "icons": {
-            "icon": "",
-            "favIcon": "",
-            "phone": "",
-            "phone@2": "",
-            "tablet": "",
-            "tablet@2": ""
-        },
-        "deviceTypes": {
-            "desktop": true,
-            "tablet": true,
-            "phone": true
-        },
-        "supportedThemes": [
-            "sap_hcb",
-            "sap_belize"
-        ]
+      "technology": "UI5",
+      "icons": {
+        "icon": "",
+        "favIcon": "",
+        "phone": "",
+        "phone@2": "",
+        "tablet": "",
+        "tablet@2": ""
+      },
+      "deviceTypes": {
+        "desktop": true,
+        "tablet": true,
+        "phone": true
+      }
     },
     "sap.ui5": {
-        "resources": {
-            "js": [],
-            "css": []
-        },
-        "dependencies": {
-            "minUI5Version": "1.94.0",
-            "libs": {
-                "sap.ovp": {}
-            },
-            "components": {}
-        },
-        "models": {
-            "i18n": {
-                "type": "sap.ui.model.resource.ResourceModel",
-                "uri": "i18n/i18n.properties",
-                "preload": false
-            },
-            "@i18n": {
-                "type": "sap.ui.model.resource.ResourceModel",
-                "uri": "i18n/i18n.properties"
-            },
-            "mainModel": {
-                "dataSource": "mainService",
-                "preload": true,
-                "settings": {
-                    "defaultCountMode": "Inline"
-                }
-            }
-        },
-        "extends": {
-            "extensions": {}
-        },
-        "contentDensities": {
-            "compact": true,
-            "cozy": true
+      "flexEnabled": true,
+      "dependencies": {
+        "minUI5Version": "1.130.8",
+        "libs": {
+          "sap.m": {},
+          "sap.ui.core": {},
+          "sap.ushell": {},
+          "sap.f": {},
+          "sap.ui.comp": {},
+          "sap.ui.generic.app": {},
+          "sap.suite.ui.generic.template": {},
+          "sap.ovp": {},
+          "sap.ui.rta": {},
+          "sap.ui.layout": {}
         }
-    },
-    "sap.fiori": {
-        "registrationIds": [],
-        "archeType": "analytical"
+      },
+      "contentDensities": {
+        "compact": true,
+        "cozy": true
+      },
+      "models": {
+        "i18n": {
+          "type": "sap.ui.model.resource.ResourceModel",
+          "settings": {
+            "bundleName": "com.erp.ovp.travelovp##.i18n.i18n"
+          }
+        },
+        "mainModel": {
+          "dataSource": "mainService",
+          "preload": true,
+          "settings": {
+            "defaultBindingMode": "TwoWay",
+            "defaultCountMode": "Inline",
+            "refreshAfterChange": false,
+            "metadataUrlParams": {
+              "sap-value-list": "none"
+            }
+          }
+        },
+        "@i18n": {
+          "type": "sap.ui.model.resource.ResourceModel",
+          "uri": "i18n/i18n.properties"
+        }
+      },
+      "resources": {
+        "css": []
+      },
+      "routing": {
+        "config": {},
+        "routes": [],
+        "targets": {}
+      }
     },
     "sap.ovp": {
-        "globalFilterModel": "mainModel",
-        "globalFilterEntityType": "OVPFilterType",
-        "containerLayout": "resizable",
-        "enableLiveFilter": true,
-        "considerAnalyticalParameters": false,
-        "cards": {
-            "card00": {
-                "model": "mainModel",
-                "template": "sap.ovp.cards.table",
-                "settings": {
-                    "title": "{{card00_title}}",
-                    "entitySet": "TravelsPerAgency",
-                    "addODataSelect": false,
-                    "presentationAnnotationPath": "com.sap.vocabularies.UI.v1.PresentationVariant#Table",
-                    "annotationPath": "com.sap.vocabularies.UI.v1.LineItem#Table"
-                }
-            },
-            "card01": {
-                "model": "mainModel",
-                "template": "sap.ovp.cards.list",
-                "settings": {
-                    "title": "{{card01_title}}",
-                    "entitySet": "MostBookedHotels",
-                    "addODataSelect": false,
-                    "presentationAnnotationPath": "com.sap.vocabularies.UI.v1.PresentationVariant#List",
-                    "annotationPath": "com.sap.vocabularies.UI.v1.LineItem#List"
-                }
-            },
-            "card02": {
-                "model": "mainModel",
-                "template": "sap.ovp.cards.stack",
-                "settings": {
-                    "title": "{{card02_title}}",
-                    "subTitle": "{{card02_subtitle}}",
-                    "itemText": "{{card02_itemtext}}",
-                    "entitySet": "TravelsPerAgency",
-                    "objectStreamCardsSettings": {
-                        "annotationPath": "com.sap.vocabularies.UI.v1.Facets#Stack"
-                    }
-                }
-            },
-            "card03": {
-                "model": "mainModel",
-                "template": "sap.ovp.cards.linklist",
-                "settings": {
-                    "title": "{{card03_title}}",
-                    "subtitle": "{{card03_subtitle}}",
-                    "listFlavor": "standard",
-                    "entitySet": "Traveler",
-                    "sortBy": "LastName",
-                    "sortOrder": "ascending",
-                    "headerAnnotationPath": "com.sap.vocabularies.UI.v1.HeaderInfo",
-                    "identificationAnnotationPath": "com.sap.vocabularies.UI.v1.Identification"
-                }
-            },
-            "card04": {
-                "model": "mainModel",
-                "template": "sap.ovp.cards.charts.analytical",
-                "settings": {
-                    "title": "{{card04_title}}",
-                    "entitySet": "FigureDevelopment",
-                    "chartAnnotationPath": "com.sap.vocabularies.UI.v1.Chart#Donut",
-                    "defaultSpan": {
-                        "rows": 0,
-                        "cols": 2
-                    }
-                }
+      "globalFilterModel": "mainModel",
+      "globalFilterEntityType": "OVPFilterType",
+      "containerLayout": "resizable",
+      "enableLiveFilter": true,
+      "considerAnalyticalParameters": false,
+      "cards": {
+        "card00": {
+          "model": "mainModel",
+          "template": "sap.ovp.cards.table",
+          "settings": {
+            "title": "{{card00_title}}",
+            "entitySet": "TravelsPerAgency",
+            "addODataSelect": false,
+            "presentationAnnotationPath": "com.sap.vocabularies.UI.v1.PresentationVariant#Table",
+            "annotationPath": "com.sap.vocabularies.UI.v1.LineItem#Table"
+          }
+        },
+        "card01": {
+          "model": "mainModel",
+          "template": "sap.ovp.cards.list",
+          "settings": {
+            "title": "{{card01_title}}",
+            "entitySet": "MostBookedHotels",
+            "addODataSelect": false,
+            "presentationAnnotationPath": "com.sap.vocabularies.UI.v1.PresentationVariant#List",
+            "annotationPath": "com.sap.vocabularies.UI.v1.LineItem#List"
+          }
+        },
+        "card02": {
+          "model": "mainModel",
+          "template": "sap.ovp.cards.stack",
+          "settings": {
+            "title": "{{card02_title}}",
+            "subTitle": "{{card02_subtitle}}",
+            "itemText": "{{card02_itemtext}}",
+            "entitySet": "TravelsPerAgency",
+            "objectStreamCardsSettings": {
+              "annotationPath": "com.sap.vocabularies.UI.v1.Facets#Stack"
             }
+          }
+        },
+        "card03": {
+          "model": "mainModel",
+          "template": "sap.ovp.cards.linklist",
+          "settings": {
+            "title": "{{card03_title}}",
+            "subtitle": "{{card03_subtitle}}",
+            "listFlavor": "standard",
+            "entitySet": "Traveler",
+            "sortBy": "LastName",
+            "sortOrder": "ascending",
+            "headerAnnotationPath": "com.sap.vocabularies.UI.v1.HeaderInfo",
+            "identificationAnnotationPath": "com.sap.vocabularies.UI.v1.Identification"
+          }
+        },
+        "card04": {
+          "model": "mainModel",
+          "template": "sap.ovp.cards.charts.analytical",
+          "settings": {
+            "title": "{{card04_title}}",
+            "entitySet": "FigureDevelopment",
+            "chartAnnotationPath": "com.sap.vocabularies.UI.v1.Chart#Donut"
+          }
+        },
+        "card05": {
+          "model": "mainModel",
+          "template": "sap.ovp.cards.table",
+          "settings": {
+            "title": "{{card05_title}}",
+            "entitySet": "Query",
+            "addODataSelect": false,
+            "presentationAnnotationPath": "com.sap.vocabularies.UI.v1.PresentationVariant#Table",
+            "annotationPath": "com.sap.vocabularies.UI.v1.LineItem#Table"
+          }
         }
+      },
+      "chartSettings": {}
     },
-    "sap.ui.generic.app": {
-        "settings": {}
+    "sap.fiori": {
+      "registrationIds": [],
+      "archeType": "analytical"
     }
-}
+  }
