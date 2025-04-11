@@ -118,4 +118,4 @@ The analytical card should now look similar to this:
 ![(BAS Add Analytical Card)](./images/AddAnalyticalCard/BAS-Run-2.png)  
   
   
-[<< Previous Step](./AddLinkListCard.md)
+[<< Previous Step](./AddLinkListCard.md) | [Next Step >>](./AddCustEntityCard.md)
