@@ -1,4 +1,4 @@
-# Add a link list card to the Overview Page
+# 5. Add a link list card to the Overview Page
 
 ### 1. Create a CDS View Entity ZRAPH_##_C_OVPTraveler
 Base this new view entity on /dmo/customer.  
@@ -109,4 +109,4 @@ It should now look similar to this:
 ![(BAS Add List Card)](./images/AddLinkListCard/BAS-Run-2.png)  
   
 
-[<< Previous Step](./AddStackCard.md) | [Next Step >>](./AddAnalyticalCard.md)
+[<< Previous Step](./4_AddStackCard.md) | [Next Step >>](./6_AddAnalyticalCard.md)

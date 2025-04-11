@@ -1,4 +1,4 @@
-# Add a list card to the Overview Page
+# 3. Add a list card to the Overview Page
 
 ### 1. Create CDS View Entity ZRAPH_##_C_OVPMostBookedHotels
 Base this new view entity on ZRAPH_##_I_RoomReservationWDTP.  
@@ -118,4 +118,4 @@ It should now look similar to this:
 ![(BAS Add List Card)](./images/AddListCard/BAS-Run-2.png)  
   
   
-[<< Previous Step](./AddTableCard.md) | [Next Step >>](./AddStackCard.md)
+[<< Previous Step](./2_AddTableCard.md) | [Next Step >>](./4_AddStackCard.md)

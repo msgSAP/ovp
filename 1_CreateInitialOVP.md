@@ -1,4 +1,4 @@
-# Create initial Overview Page
+# 1. Create initial Overview Page
 
 ### 1. Create the Interface CDS View Entity ZRAPH_##_I_OVPFilter
 This CDS View Entity (together with its consumption view) represents the filter options for the Overview Page.  
@@ -159,4 +159,4 @@ Again check the app. Press the value help for both filters. It should now look l
 [__Solution__](./solutions/CreateInitialOVP/ZRAPH_%23%23_C_OVPFilter-3.txt)
   
   
-[Next Step >>](./AddTableCard.md)
+[Next Step >>](./2_AddTableCard.md)

@@ -1,4 +1,4 @@
-# Add an analytical card to the Overview Page
+# 6. Add an analytical card to the Overview Page
 
 ### 1. Create CDS View Entity ZRAPH_##_I_OVPFigureDevelopmnt
 Base this new view entity on ZRAPH_##_I_TravelWDTP.  
@@ -118,4 +118,4 @@ The analytical card should now look similar to this:
 ![(BAS Add Analytical Card)](./images/AddAnalyticalCard/BAS-Run-2.png)  
   
   
-[<< Previous Step](./AddLinkListCard.md) | [Next Step >>](./AddCustEntityCard.md)
+[<< Previous Step](./5_AddLinkListCard.md) | [Next Step >>](./7_AddCustEntityCard.md)

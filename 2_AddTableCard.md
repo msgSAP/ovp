@@ -1,4 +1,4 @@
-# Add a table card to the Overview Page
+# 2. Add a table card to the Overview Page
 
 ### 1. Create CDS View Entity ZRAPH_##_C_OVPTravelsPerAg
 Base this new view entity on ZRAPH_##_I_TravelWDTP.  
@@ -150,4 +150,4 @@ The filter Status should now impact the result, while CustomerHomeCountry does n
 [__Solution__](./solutions/AddTableCard/ZRAPH_%23%23_C_OVPTravelsPerAg-3.txt)
   
   
-[<< Previous Step](./CreateInitialOVP.md) | [Next Step >>](./AddListCard.md)
+[<< Previous Step](./1_CreateInitialOVP.md) | [Next Step >>](./3_AddListCard.md)

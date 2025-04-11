@@ -1,4 +1,4 @@
-# Add a stack card to the Overview Page
+# 4. Add a stack card to the Overview Page
   
 ### 1. Add annotations to CDS View Entity ZRAPH_##_C_OVPTravelsPerAg
 Add the following annotations to provide the metadata for the view entity:  
@@ -111,4 +111,4 @@ It should now look similar to this:
 ![(BAS Add List Card)](./images/AddStackCard/BAS-Run-2.png)  
   
   
-[<< Previous Step](./AddListCard.md) | [Next Step >>](./AddLinkListCard.md)
+[<< Previous Step](./3_AddListCard.md) | [Next Step >>](./5_AddLinkListCard.md)
