@@ -176,6 +176,10 @@
           "settings": {
             "title": "{{card04_title}}",
             "entitySet": "FigureDevelopment",
+            "defaultSpan": {
+            "rows": 0,
+            "cols": 2
+            },
             "chartAnnotationPath": "com.sap.vocabularies.UI.v1.Chart#Donut"
           }
         },
@@ -183,10 +187,6 @@
           "model": "mainModel",
           "template": "sap.ovp.cards.table",
           "settings": {
-            "defaultSpan": {
-                "rows": 0,
-                "cols": 2
-            },
             "title": "{{card05_title}}",
             "entitySet": "Query",
             "addODataSelect": false,
