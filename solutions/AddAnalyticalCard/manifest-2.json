@@ -183,6 +183,10 @@
           "model": "mainModel",
           "template": "sap.ovp.cards.table",
           "settings": {
+            "defaultSpan": {
+                "rows": 0,
+                "cols": 2
+            },
             "title": "{{card05_title}}",
             "entitySet": "Query",
             "addODataSelect": false,
